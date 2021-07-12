@@ -22,7 +22,7 @@ https://github.com/websure/incident-management-api/tree/main/api_docs
 
 https://github.com/websure/incident-management-api/tree/main/postman-collection
 
-### Pre-Requisite
+#### Pre-Requisite
 
 - MongoDB Transactions works on clustures. For development purpose only :- dependency on 'run-rs' is required.
 - For windows users, Please update hostname to 'computer name' for mongod url in .env file.
@@ -61,17 +61,17 @@ src /
 tests/ : All tests come here
 ```
 
-![alt text](https://github.com/websure/express-server-incident-management/blob/master/assets/control-flow.png)
+#### Control Flow
 
-<img src="https://github.com/websure/express-server-incident-management/blob/master/assets/control-flow.png"  height="auto" />
+<img src="https://github.com/websure/express-server-incident-management/blob/master/assets/control-flow.png"  height="auto" alt="control flow"/>
 
-#### Features :
+#### Features
 
 - Express Node server for incident management system - Runs on localhost:5000
 - MongoDB for DB and Mongoose as ODM
 - MongoDB transactions for Multi-documents CRUD
 
-### Stack
+#### Stack
 
     Docker
     Express server
@@ -83,7 +83,7 @@ tests/ : All tests come here
     React
     React-testing library
 
-### Bootstrapping Application
+#### Bootstrapping Application
 
 - clone the project : https://github.com/websure/incident-management-api.git
 - checkout to 'incident-container' branch
@@ -92,12 +92,12 @@ tests/ : All tests come here
   - docker-compose up
 - Application will run on http://localhost:3000/
 
-### Docker Images
+#### Docker Images
 
 - UI - websure/incident-ui
 - API - websure/incident-api
 
-### Caveats
+#### Caveats
 
 - Add unit tests for classes
 - Implement interfaces for classes
