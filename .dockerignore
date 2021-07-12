@@ -1,0 +1,4 @@
+data
+dist
+npm-debug.log
+.dockerignore

@@ -1,0 +1,44 @@
+{
+  "name": "express_server_boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "",
+  "author": "Suresh <suresh.jain@ymail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start-rs": "run-rs --mongod --keep --shell",
+    "start": "concurrently  \"npm run start-rs\" \"ts-node src/index.ts\" ",
+    "build": "tsc",
+    "dev": "ts-node-dev src/index.ts",
+    "test": "jest --testTimeout=10000 --runInBand",
+    "prettier": "prettier --write ."
+  },
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "joi": "^17.4.0",
+    "mongoose": "^5.12.14",
+    "prettier": "^2.3.0",
+    "reflect-metadata": "^0.1.13",
+    "run-rs": "^0.7.5",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^9.1.1",
+    "typedi": "^0.10.0",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/bunyan": "^1.8.6",
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^14.14.41",
+    "@types/supertest": "^2.0.11",
+    "jest": "^27.0.4",
+    "supertest": "^6.1.3",
+    "ts-node-dev": "^1.1.8"
+  }
+}
