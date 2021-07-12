@@ -16,11 +16,11 @@ readme : https://websure.github.io/incident-management-api/
 
 ##### API Documentation :
 
-https://github.com/websure/incident-management-api/tree/main/api_docs
+https://github.com/websure/express-server-incident-management/tree/master/api_docs
 
 ##### Postman collection:
 
-https://github.com/websure/incident-management-api/tree/main/postman-collection
+https://github.com/websure/express-server-incident-management/tree/master/postman-collection
 
 #### Pre-Requisite
 
@@ -85,12 +85,10 @@ tests/ : All tests come here
 
 #### Bootstrapping Application
 
-- clone the project : https://github.com/websure/incident-management-api.git
-- checkout to 'incident-container' branch
-  - git checkout incident-container
-- cd to project root folder and execute following commands in the terminal
-  - docker-compose up
-- Application will run on http://localhost:3000/
+- clone the project : https://github.com/websure/express-server-incident-management.git
+- Execute `docker-compose up` in terminal
+- UI Application will run on http://localhost:3000/
+- API Server will run on http://localhost:5000/
 
 #### Docker Images
 

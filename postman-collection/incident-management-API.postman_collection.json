@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "sparescnx-incident-management-API",
+		"_postman_id": "2f3f01c5-cc92-77aa-950d-b1f503c67ec7",
+		"description": "CRUD APIs for incident management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create incident",
+			"request": {
+				"url": "http://localhost:5000/api/v1/incident/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "df34e.ffrh.mh7u8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"analysis\",\r\n  \"title\": \"2nd incident\",\r\n  \"description\": \"\",\r\n  \"type\": \"bug\",\r\n  \"assignee\": \"user1\",\r\n  \"created_by\": \"\"\r\n}"
+				},
+				"description": "POST method to create Incident.\r\nOnly admin can create incidents."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete  Incident",
+			"request": {
+				"url": "http://localhost:5000/api/v1/incident/60b0afc20e813034642a0131",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "df34e.ffrh.mh7u8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "only Admin can delete incident"
+			},
+			"response": []
+		},
+		{
+			"name": "Get incident List",
+			"request": {
+				"url": "http://localhost:5000/api/v1/incident/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "df34e.ffrh.mh7u8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_index\":0,\r\n    \"max\":5,\r\n    \"sortby\":\"created_on\",\r\n    \"orderby\":\"desc\",\r\n    \"filterby\":[\r\n        {\r\n            \"acknowledge\":false\r\n        }\r\n    ]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get incident details",
+			"request": {
+				"url": "http://localhost:5000/api/v1/incident/60b0afd40e813034642a0133",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "df34e.ffrh.mh7u8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Incident",
+			"request": {
+				"url": "http://localhost:5000/api/v1/incident/60b0afd40e813034642a0133",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "df34e.ffrh.mh7u8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"\",\r\n        \"status\": \"analysis\",\r\n        \"title\": \"updating 2nd incident\",\r\n        \"assignee\": \"user1\",\r\n        \"acknowledge\": \"false\",\r\n        \"type\": \"bug\"\r\n        }"
+				},
+				"description": "acknowledge -> only assigned user can ack incidents\r\n\r\nactivity status is updated only for change in assignee, status"
+			},
+			"response": []
+		}
+	]
+}

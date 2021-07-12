@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  api:
+    image: websure/incident-api
+    ports:
+      - '5000:5000'
+    depends_on:
+      - db
+    container_name: incident-api
+
+  client:
+    #build: ./services/ui
+    image: websure/incident-ui
+    ports:
+      - '3000:3000'
+    container_name: incident-client
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+  db:
+    image: mongo
+    ports:
+      - '27017:27017'
+    container_name: incident-db
