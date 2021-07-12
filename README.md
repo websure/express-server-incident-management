@@ -9,17 +9,18 @@
 
 https://websure.github.io/incident-management-ui/
 
-##### readme URL - API :
-
-https://websure.github.io/incident-management-api/
-
 ##### Application URL :
 
-https://github.com/websure/incident-management-api/
+https://github.com/websure/express-server-incident-management
+readme : https://websure.github.io/incident-management-api/
 
 ##### API Documentation :
 
 https://github.com/websure/incident-management-api/tree/main/api_docs
+
+##### Postman collection:
+
+https://github.com/websure/incident-management-api/tree/main/postman-collection
 
 ### Pre-Requisite
 
@@ -59,6 +60,10 @@ src /
 
 tests/ : All tests come here
 ```
+
+![alt text](https://github.com/websure/express-server-incident-management/blob/master/assets/control-flow.png)
+
+<img src="https://github.com/websure/express-server-incident-management/blob/master/assets/control-flow.png"  height="auto" />
 
 #### Features :
 
