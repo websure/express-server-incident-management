@@ -95,7 +95,7 @@ tests/ : All tests come here
 - UI - websure/incident-ui
 - API - websure/incident-api
 
-#### Caveats
+#### TODO
 
 - Add unit tests for classes
 - Implement interfaces for classes
