@@ -12,6 +12,7 @@ https://websure.github.io/incident-management-ui/
 ##### Application URL :
 
 https://github.com/websure/express-server-incident-management
+
 readme : https://websure.github.io/incident-management-api/
 
 ##### API Documentation :
@@ -27,7 +28,8 @@ https://github.com/websure/express-server-incident-management/tree/master/postma
 - MongoDB Transactions works on clusters. For development purpose only :- dependency on 'run-rs' is required.
 - For windows users, Please update hostname to 'computer name' for mongod url in .env file.
 - For details : https://www.npmjs.com/package/run-rs
-- docker
+- mongo > v4.0. Please note 'run-rs' will refer to mongod version from the environment path. To run custom version, please replace `--mongod with --v <YOUR_MONGO_VERSION>` in package.json -> scripts -> start-rs
+- Docker
 
 #### Folder structure :
 
@@ -89,6 +91,11 @@ tests/ : All tests come here
 - Execute `docker-compose up` in terminal
 - UI Application will run on http://localhost:3000/
 - API Server will run on http://localhost:5000/
+
+#### Tests
+
+- All tests are inside test/ folder
+- To run tests - Execute the following command - `npm run test`
 
 #### Docker Images
 
