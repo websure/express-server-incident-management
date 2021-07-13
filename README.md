@@ -2,7 +2,7 @@
 
 - Node server for incident management system.
 - Mondo DB for database
-- Layered, loosely coupled Architecture - (TypeDi for Dependency Injection)
+- Layered, loosely coupled Architecture - (Typedi for Dependency Injection)
 - Multi-Document CRUD operations using MongoDB Transactions
 
 ##### readme URL - UI :
@@ -24,7 +24,7 @@ https://github.com/websure/express-server-incident-management/tree/master/postma
 
 #### Pre-Requisite
 
-- MongoDB Transactions works on clustures. For development purpose only :- dependency on 'run-rs' is required.
+- MongoDB Transactions works on clusters. For development purpose only :- dependency on 'run-rs' is required.
 - For windows users, Please update hostname to 'computer name' for mongod url in .env file.
 - For details : https://www.npmjs.com/package/run-rs
 - docker
@@ -48,7 +48,7 @@ src /
         modelSchemas/ : Define Mongoose schemas here
         DataAccessService : Wrapper service to manage DB sessions for CRUD operations
     module/ : All features / services are defined here
-        /user
+        incident/ :
             domain/ : Define DAO and VO objects
             controller/ : Controllers for API endpoints. Handle request and response objects
             service/ : Each service performs a specific operation. Business logic goes here
@@ -75,7 +75,7 @@ tests/ : All tests come here
 
     Docker
     Express server
-    typedi - Dependi injection
+    typedi - Dependency injection
     Mongo dB
     Mongoose ODM
     JOI
